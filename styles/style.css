@@ -1,0 +1,9 @@
+.bottomTopContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 300px;
+}
+
+.commonFooterText {
+  margin-bottom: 20px;
+}
