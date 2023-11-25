@@ -53,55 +53,18 @@
      <tbody id="alex">
         <tr class="thead-default itemList">
           <div class="card cardParams" style="padding: 30px">
-            <img src="img/kremlin.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки по России</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
+          <?php
+          include "script.php";
+              foreach ( $result as $data) {
+                  echo "<td>".$data['photo']."</td>";
+                  <div style="margin-bottom: 30px; font-size: 24px;">".$data['name_of_route']."</div>
+                  <div class="btn-primary blueButton">Посмотреть все</div>
+              }
+          ?>
           </div>
         </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/turkey.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Турции</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/japan.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Японии</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/egypt.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Египту</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/blackhills.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Черногорию</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/italy.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Италию</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
-        <tr>
-          <div class="card cardParams" style="padding: 30px">
-            <img src="img/sweden.png" style="margin-right: 30px; margin-bottom: 20px;" />
-            <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Швецию</div>
-            <div class="btn-primary blueButton">Посмотреть все</div>
-          </div>
-        </tr>
+       </div>
      </tbody>
-      </div>
       </table>
     </div>
   </div>
