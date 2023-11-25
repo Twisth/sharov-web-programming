@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="styles/style.css" type="text/css"/>
     <link rel="stylesheet" href="styles/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="styles/MainPageStyles.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="scripts/script.js" type="text/javascript"></script>
+    <link rel="icon" href="img/service-icon.png">
+    <title>Туристическое агенство</title>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -34,52 +38,71 @@
   </header>
   <div>
     <div>
+      <table id="testTable" class="table-bordered tableParams" cellpadding="10px">
       <div style="display: flex; margin-left: 120px; margin-top: 100px; width: 250px; justify-content: space-between;">
         <div style="font-size: 20px;">Главная</div>
         <div><img src="img/dot.png" /></div>
         <div style="font-size: 20px;">Каталог путевок</div>
       </div>
       <div style="display: flex; margin-left: 120px; margin-top: 50px; margin-bottom: 50px;">
+        <input id="inputSearch" style="margin-left: 70px;" type="text" placeholder="Поиск...">
         <div style="font-size: 36px; margin-right: 20px;">Каталог путевок</div>
         <img src="img/Vector_1.png" style="height: 26px; width: 26px; margin-top: 20px;" />
       </div>
       <div class="itemsContainer" style="width: 1500px; margin-left: 100px">
+     <tbody id="alex">
+        <tr class="thead-default itemList">
           <div class="card cardParams" style="padding: 30px">
             <img src="img/kremlin.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки по России</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/turkey.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Турции</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/japan.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Японии</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/egypt.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки по Египту</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/blackhills.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Черногорию</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/italy.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Италию</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+        <tr>
           <div class="card cardParams" style="padding: 30px">
             <img src="img/sweden.png" style="margin-right: 30px; margin-bottom: 20px;" />
             <div style="margin-bottom: 30px; font-size: 24px;">Путевки в Швецию</div>
             <div class="btn-primary blueButton">Посмотреть все</div>
           </div>
+        </tr>
+     </tbody>
       </div>
+      </table>
     </div>
   </div>
   <footer>
