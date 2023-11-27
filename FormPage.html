@@ -37,18 +37,18 @@
     </div>
   </header>
   <div style="margin-left: 100px; margin-top: 50px; margin-bottom: 150px;">
-    <form method="post" action="insert.php" id="myForm">
+    <form method="post" action="" id="myForm">
       <div style="font-size: 18px;">Электронная почта</div>
-      <input class="form-control fieldFormParams" id="email" name="email" placeholder="Введите почту" />
+      <input class="form-control fieldFormParams" id="email" name="email" required placeholder="Введите почту" />
 
       <div style="font-size: 18px;">Ваше ФИО</div>
-      <input class="form-control fieldFormParams" id="full_name" name="full_name" placeholder="Введите номер телефона" />
+      <input class="form-control fieldFormParams" id="full_name" name="full_name" required placeholder="Введите номер телефона" />
 
       <div style="font-size: 18px;">Ваш контактный номер</div>
-      <input class="form-control fieldFormParams" id="phone_number" name="phone_number" placeholder="Введите номер телефона" />
+      <input class="form-control fieldFormParams" id="phone_number" name="phone_number" required placeholder="Введите номер телефона" />
 
       <div style="font-size: 18px;">Дополнительная информация (необязатально)</div>
-      <textarea id="text_of_question" name="text_of_question" class="form-control fieldFormParams"></textarea>
+      <textarea id="text_of_question" name="text_of_question" required class="form-control fieldFormParams"></textarea>
 
       <button type="submit" id="submitButton" class="btn-primary blueButton">Подтвердить</button>
 
@@ -69,6 +69,15 @@
           </div>
         </div>
       </div>
+
+   <table>
+        <tbody id="data_from_db">
+
+        </tbody>
+    </table>
+    <form style="margin: 50px;" method="post" action="" id="myForm">
+        <button id="getData" type="submit" class="btn-primary blueButton" style="width: 85px;">Загрузить данные из БД</button>
+    </form>
 
     </form>
   </div>

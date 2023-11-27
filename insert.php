@@ -1,9 +1,4 @@
 <?php
-
-    $data = $_POST['full_name'];
-    $full_name = $_POST['full_name'];
-    echo $full_name;
-
     $connection = new mysqli("localhost", "root", "", "sharov_db");
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo $data();

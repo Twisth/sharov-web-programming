@@ -8,9 +8,9 @@ $(document).ready(function() {
         var emailRegex = new RegExp('^.+@.+$')
         var phoneNumberRegex = new RegExp('^(8|\\+7)(\\ |\\(| \\(|\\-|)\\d{3}(\\ |\\) |-|\\)|)(\\d{7}|\\d{3}-\\d{2}-\\d{2}|\\d{3} \\d{2} \\d{2})$');
 
-        var fullName = $('#fullName').val();
-        var textOfQuestion = $('#textOfQuestion').val();
-        var phoneNumber = $('#phoneNumber').val();
+        var fullName = $('#full_name').val();
+        var textOfQuestion = $('#text_of_question').val();
+        var phoneNumber = $('#phone_number').val();
         var userEmail = $('#email').val();
 
         phoneNumberState = phoneNumberRegex.test(phoneNumber);
@@ -18,17 +18,25 @@ $(document).ready(function() {
 
         if (phoneNumberState && emailState) {
             $('.modal-body').text('Данные формы успешно обработаны и отправлены');
+            $.ajax({
+                type: "POST",
+                url: 'ajax.php',
+                data: {
+                    fullName: fullName,
+                    phoneNumber: phoneNumber,
+                    email: userEmail,
+                    textOfQuestion: textOfQuestion,
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            })
         } else {
            $('.modal-body').text('Данные формы некорректны');
         }
-
-        var formData = {
-          fullName: fullName,
-          phoneNumber: phoneNumber,
-          email: userEmail,
-          textOfQuestion: textOfQuestion,
-        }
-        console.log(JSON.stringify(formData))
     }))
     $("#inputSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
